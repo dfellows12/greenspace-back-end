@@ -6,7 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+User.destroy_all
+Plant.destroy_all
 
+User.create(name: "David", password: "yo", email: "dellows", phone_number: "444444444")
 Plant.create(name: "Amaryllis", scientific_name: "Hippeastrum", water_schedule: "", fertilizer_schedule: "", info: "
 Temperature:	The amaryllis within the growing period (winter - spring) prefers temperatures of 70 - 75F°f (21 - 24°c) and from September - November (or early December) 55°f (13°c). After the plant as flowered the temperature can be kept at around 70 - 75F°f (21 - 24°c) which will keep the flower healthier longer.
 Light:	Bright light without too much direct sunlight is preferable.
@@ -185,7 +188,7 @@ Watering:	Keep the soil moist at all times. Water less in the winter.
 Soil:	A peat based potting soil mixed with part perlite or sand to improve drainage is ideal or any other well draining potting mix.
 Fertilizer:	From spring until the and of summer they like to be fed with a diluted liquid fertilizer.
 Re-Potting:	Re-pot once every two or three years during spring. They like to become slightly root bound - so don’t worry if they seem to showing some roots through the bottom of the pot.
-Humidity:	Average to high room humidity is needed. Increasing the humidity levels of a room "especially if the room has artificial heating" will improve the plants growth and prevent leaves from becoming dry and shrilling up.
+Humidity:	Average to high room humidity is needed. Increasing the humidity levels of a room especially if the room has artificial heating will improve the plants growth and prevent leaves from becoming dry and shrilling up.
 Propagation:	These are best propagated by dividing the root with a few stalks and leaves attached during spring and summer.
 Insects:	Over the years mealy bug have proven to be attracted to this plant and cause problems. Red spider mite have also been known to cause problems.", image_url:"https://www.houseplantsexpert.com/image-files/aglaonema.png", category: "Foliage")
 

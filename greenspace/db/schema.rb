@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 2019_12_11_172205) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "users", force: :cascade do |t|
+  create_table "users", force: :cascade do |rait|
     t.string "name"
     t.string "password"
     t.string "email"
