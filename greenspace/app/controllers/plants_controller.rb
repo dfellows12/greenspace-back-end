@@ -5,7 +5,6 @@ class PlantsController < ApplicationController
     end
 
     def index
-        byebug
         plants = Plant.all
         render json: plants
     end
