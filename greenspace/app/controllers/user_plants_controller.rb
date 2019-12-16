@@ -9,7 +9,8 @@ class UserPlantsController < ApplicationController
     end
 
     def create
-        byebug
+        userPlant = UserPlant.create(user_id: params["userId"],plant_id: params["plant"]["id"], name: params["plant"]["name"], scientific_name: params["plant"]["scientific_name"], water_schedule: params["plant"]["water_schedule"], fertilizer_schedule: params["plant"]["fertilizer_schedule"], info: params["plant"]["info"], image_url: params["plant"]["image_url"], category: params["plant"]["category"])
+        render json: userPlant
     end
 
 

@@ -25,10 +25,10 @@ class UsersController < ApplicationController
 
     def login
         user = User.find_by(name: params["name"])
-        if user 
+        if user.password == params[:password]
             render json: user
         else
-            render json: {message: "User not found"}
+            render json: {message: "User/Password not found"}
         end
     end
 
