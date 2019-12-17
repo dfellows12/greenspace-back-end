@@ -14,6 +14,7 @@ class PlantsController < ApplicationController
         plant = Plant.find(params[:id])
         plant.update(image: params[:image])
         image_url = rails_blob_path(plant.image)
-        render json: { plant: plant, image_url: image_url} 
+        plant.update(image_url: image_url)
+        render json: plant
     end
 end

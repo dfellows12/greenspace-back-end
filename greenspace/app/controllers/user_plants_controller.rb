@@ -13,5 +13,11 @@ class UserPlantsController < ApplicationController
         render json: userPlant
     end
 
+    def destroy
+        userPlant = UserPlant.find(params[:userplant][:id])
+        userPlant.delete
+        render json: userPlant
+    end
+
 
 end
