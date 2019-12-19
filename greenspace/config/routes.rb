@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  resources :notes, only: [:index, :create, :delete]
-  resources :user_plants, only: [:index, :create, :destroy, :update]
-  resources :plants, only: [:index, :show, :create, :destroy, :update]
+  resources :notes, only: [:index, :create, :destroy]
+  resources :user_plants, only: [:show, :index, :create, :destroy, :update]
+  resources :plants, only: [:index, :create, :destroy, :update]
   resources :users, only: [:show, :index, :create]
 
   post '/login' => 'users#login'

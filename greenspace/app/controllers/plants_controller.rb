@@ -11,6 +11,7 @@ class PlantsController < ApplicationController
     end
 
     def update
+        byebug
         plant = Plant.find(params[:id])
         plant.update(image: params[:image])
         image_url = rails_blob_path(plant.image)
