@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :fertilizings, only: [:index, :create, :destroy]
+  resources :waterings, only: [:index, :create, :destroy]
   resources :notes, only: [:index, :create, :destroy]
   resources :user_plants, only: [:show, :index, :create, :destroy, :update]
   resources :plants, only: [:index, :create, :destroy, :update]
