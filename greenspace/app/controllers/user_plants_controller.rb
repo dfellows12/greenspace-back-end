@@ -31,11 +31,17 @@ class UserPlantsController < ApplicationController
             info: params["userplant"]["info"],
             image_url: params["userplant"]["image_url"],
             category: params["userplant"]["category"])
-        end
-        if params["fertilizingSchedule"]
+        elsif params["fertilizingSchedule"]
             userPlant.update(
             name: params["userplant"]["name"],
             fertilizer_schedule: params["fertilizingSchedule"],
+            scientific_name: params["userplant"]["scientific_name"], 
+            info: params["userplant"]["info"],
+            image_url: params["userplant"]["image_url"],
+            category: params["userplant"]["category"])
+        else
+            userPlant.update(
+            name: params["userplant"]["name"],
             scientific_name: params["userplant"]["scientific_name"], 
             info: params["userplant"]["info"],
             image_url: params["userplant"]["image_url"],
